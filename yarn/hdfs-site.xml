@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <!-- Propriedade que define o diretório do NameNode -->
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/hadoop/data/nameNode</value>
+        <description>Diretório local onde os dados do NameNode são armazenados</description>
+    </property>
+
+    <!-- Propriedade que define o diretório do DataNode -->
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/hadoop/data/dataNode</value>
+        <description>Diretório local onde os dados do DataNode são armazenados</description>
+    </property>
+
+    <!-- Propriedade que define o fator de replicação dos dados -->
+    <property>
+        <name>dfs.replication</name>
+        <value>2</value>
+        <description>Número de cópias de cada bloco de dados armazenadas no HDFS</description>
+    </property>
+
+    <!-- Propriedade que habilita ou desabilita as permissões no HDFS e tem que configurar o Kerberos -->
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+        <description>Indica se as permissões de arquivo no HDFS estão habilitadas</description>
+    </property>
+    
+</configuration>

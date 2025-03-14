@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <!-- Propriedade que define o sistema de arquivos padrão -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://spark-master-yarn:8080</value>
+        <description>URI do sistema de arquivos padrão (HDFS)</description>
+    </property>
+
+</configuration>

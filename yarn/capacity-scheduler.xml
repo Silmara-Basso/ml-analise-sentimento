@@ -1,0 +1,21 @@
+<configuration>
+
+  <!-- Define as filas de capacidade disponíveis no YARN. Aqui, a única fila disponível é a "default". -->
+  <property>
+    <name>yarn.scheduler.capacity.root.queues</name>
+    <value>default</value>
+  </property>
+  
+  <!-- Define a capacidade percentual da fila "default". Aqui, está configurado para usar 100% dos recursos disponíveis do cluster. -->
+  <property>
+    <name>yarn.scheduler.capacity.root.default.capacity</name>
+    <value>100</value>
+  </property>
+  
+  <!-- Define o calculador de recursos a ser usado pelo YARN Capacity Scheduler. O "DominantResourceCalculator" considera tanto a memória quanto os núcleos de CPU para determinar a capacidade dominante. -->
+  <property>
+    <name>yarn.scheduler.capacity.resource-calculator</name>
+    <value>org.apache.hadoop.yarn.util.resource.DominantResourceCalculator</value>
+  </property>
+  
+</configuration>

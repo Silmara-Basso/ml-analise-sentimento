@@ -1,0 +1,45 @@
+<configuration>
+    
+    <!-- Define que o framework usado para operações de MapReduce é o YARN. -->
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+
+    <!-- Define a variável de ambiente HADOOP_MAPRED_HOME para o ApplicationMaster do MapReduce no YARN, apontando para o diretório do Hadoop. -->
+    <property>
+        <name>yarn.app.mapreduce.am.env</name>
+        <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+
+    <!-- Define a variável de ambiente HADOOP_MAPRED_HOME para as tarefas de mapeamento, apontando para o diretório do Hadoop. -->
+    <property>
+        <name>mapreduce.map.env</name>
+        <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+
+    <!-- Define a variável de ambiente HADOOP_MAPRED_HOME para as tarefas de redução, apontando para o diretório do Hadoop. -->
+    <property>
+        <name>mapreduce.reduce.env</name>
+        <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    </property>
+
+    <!-- Define a quantidade de memória (em megabytes) alocada para o ApplicationMaster do MapReduce no YARN. -->
+    <property>
+        <name>yarn.app.mapreduce.am.resource.mb</name>
+        <value>1024</value>
+    </property>
+
+    <!-- Define a quantidade de memória (em megabytes) alocada para cada tarefa de mapeamento. -->
+    <property>
+        <name>mapreduce.map.memory.mb</name>
+        <value>512</value>
+    </property>
+
+    <!-- Define a quantidade de memória (em megabytes) alocada para cada tarefa de redução. -->
+    <property>
+        <name>mapreduce.reduce.memory.mb</name>
+        <value>512</value>
+    </property>
+    
+</configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<configuration>
+
+    <!-- Define o hostname do ResourceManager no cluster YARN. -->
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>spark-master-yarn</value>
+    </property>
+
+    <!-- Define o número de núcleos de CPU (vcores) disponíveis por NodeManager no cluster YARN. -->
+    <property>
+        <name>yarn.nodemanager.resource.cpu-vcores</name>
+        <value>2</value>
+    </property>
+
+    <!-- Define os serviços auxiliares a serem executados pelo NodeManager. Aqui, o serviço "mapreduce_shuffle" está configurado, o que é necessário para operações de shuffle de MapReduce. -->
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+
+    <!-- Define a quantidade de memória (em megabytes) disponível por NodeManager no cluster YARN. -->
+    <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>2048</value>
+    </property>
+
+    <!-- Define a quantidade máxima de memória (em megabytes) que pode ser alocada a um contêiner (unidade de alocação de recursos) no YARN. -->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>2048</value>
+    </property>
+
+    <!-- Define a quantidade mínima de memória (em megabytes) que pode ser alocada a um contêiner no YARN. -->
+    <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>512</value>
+    </property>
+
+    <!-- Habilita a agregação de logs no YARN, permitindo que os logs das aplicações sejam coletados e armazenados centralmente. -->
+    <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+    </property>
+    
+</configuration>
